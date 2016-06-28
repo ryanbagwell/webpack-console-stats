@@ -1,6 +1,6 @@
 {
   "name": "webpack-console-stats",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Send formatted webpack stats to stdout",
   "main": "index.js",
   "scripts": {
