@@ -1,4 +1,5 @@
 import chalk from 'chalk';
+import filesize from 'filesize';
 
 class Logger {
 
@@ -85,6 +86,12 @@ const showStats = (fatalError, stats, options = {}) => {
 
   if (jsonStats.version) {
     logger.info(`Webpack version ${jsonStats.version}`);
+  }
+
+  if (jsonStats.assets) {
+    jsonStats.assets.forEach((asset) => {
+      logger.info(`${asset.name} | ${filesize(asset.size)}`)
+    })
   }
 
 };
