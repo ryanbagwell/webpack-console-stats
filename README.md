@@ -10,7 +10,11 @@ import showStats from 'webpack-console-stats';
 
 webpack(conf).watch(100, (err, stats) => {
 
-  showStats(err, stats);
+  showStats(err, stats, {
+    timings: true,
+    version: true,
+    assets: true
+    });
 
 });
 
